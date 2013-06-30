@@ -53,7 +53,7 @@ morfologicznej lub oznaczania części mowy w obu językach.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_datadir}/apertium/modes
 
-%{__make} install \
+%{__make} -j1 install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
